@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Thông Tin Cá Nhân</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="date"],
+        input[type="file"],
+        select,
+        textarea {
+            width: 70%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="color"] {
+            padding: 5px;
+            height: 40px;
+            width:550px;
+        }
+        input[type="range"] {
+            width: 70%;
+        }
+        .form-group.inline {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .form-group.inline label {
+            flex: 1;
+        }
+        .form-group.inline input {
+            flex: 2;
+            margin-left: 10px;
+        }
+        .form-actions {
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            background: #007BFF;
+            color: black;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        legend {
+       padding: 0 10px;
+        font-weight: bold;
+        font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Form Thông Tin Cá Nhân</h2>
+        <fieldset>
+            <legend> <h3>Thông Tin Cá Nhân</h3> </legend>
+        <form>
+            <div class="form-group">
+                <label for="name">Họ và Tên:</label>
+                <input type="text" id="name" name="name" placeholder="Nhập họ và tên của bạn">
+            </div>
+            <div class="form-group">
+                <label for="password">Mật khẩu:</label>
+                <input type="password" id="password" name="password" placeholder="Nhập mật khẩu">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@domain.com">
+            </div>
+            <div class="form-group">
+                <label for="dob">Ngày sinh:</label>
+                <input type="date" id="dob" name="dob">
+            </div>
+            <div class="form-group">
+                <label for="color">Màu yêu thích:</label>
+                <input type="color" id="color" name="color">
+            </div>
+            <div class="form-group">
+                <label><input type="checkbox" name="terms">Tôi đồng ý với các điều khoản</label>
+            </div>
+            <div class="form-group">
+                <label for="avatar">Ảnh đại diện:</label>
+                <input type="file" id="avatar" name="avatar">
+            </div>
+        </fieldset>
+        <fieldset>
+           <legend> <h3>Thông Tin Bổ Sung</h3> </legend>
+            <div class="form-group">
+                <label for="satisfaction">Mức độ hài lòng (0-100):</label>
+                <input type="range" id="satisfaction" name="satisfaction" min="0" max="100" value="50">
+            </div>
+            <div class="form-group">
+                <label for="gender">Giới tính:</label>
+                <select id="gender" name="gender">
+                    <option value="male">Nam</option>
+                    <option value="female">Nữ</option>
+                    <option value="other">Khác</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="job">Nghề nghiệp:</label>
+                <input type="text" id="job" name="job" placeholder="Chọn hoặc nhập nghề nghiệp">
+            </div>
+            <div class="form-group">
+                <label for="bio">Giới thiệu bản thân:</label>
+                <textarea id="bio" name="bio" rows="4" placeholder="Viết một vài dòng giới thiệu về bản thân..."></textarea>
+            </div>
+    </fieldset>
+            <div class="form-actions">
+                <button type="submit">Gửi Thông Tin</button>
+                <button type="button">Xem Trước</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
